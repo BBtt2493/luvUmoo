@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>เป็นแฟนกันมั้ย</title>
+  <style>
+    body {
+      background: #fff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .ok {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .no {
+      background-color: #dc3545;
+      color: #fff;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="question">
+    <h1>เป็นแฟนกันมั้ย</h1>
+    <div class="buttons">
+      <button class="ok" onclick="handleOk()">OK</button>
+      <button class="no" onclick="handleNo()">NO</button>
+    </div>
+  </div>
+
+  <div id="result" class="hidden">
+    <h1 style="font-size: 2.5em; color: #ff6b81;">Yay! kunmoo๋ luv u 🥰</h1>
+  </div>
+
+  <script>
+    function handleOk() {
+      document.getElementById('question').classList.add('hidden');
+      document.getElementById('result').classList.remove('hidden');
+    }
+
+    function handleNo() {
+      // ไม่ทำอะไรเมื่อกด NO
+    }
+  </script>
+</body>
+</html>
